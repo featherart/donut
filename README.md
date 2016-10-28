@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
-  position: relative;
-  width: 960px;
-}
-
-text {
-  font: 10px sans-serif;
-}
-
-form {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-</style>
 <form>
   <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
   <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
@@ -32,7 +11,7 @@ var width = 960,
     radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal()
-  	.range(["#ce4639", "#d87649", "#e5c33b"]);
+    .range(["#ce4639", "#d87649", "#e5c33b"]);
 
 var pie = d3.layout.pie()
     .value(function(d) { return d.apples; })
